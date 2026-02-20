@@ -1,0 +1,44 @@
+start_parking:
+  name: Start parking
+  description: Start a visitor parking session for a license plate.
+  fields:
+    product_id:
+      name: Product ID
+      description: The 2Park product ID (e.g. BDABZRG_1317$1055649).
+      required: true
+      example: "BDABZRG_1317$1055649"
+      selector:
+        text:
+    license_plate:
+      name: License plate
+      description: License plate to park. If omitted, uses the currently selected plate from the select entity.
+      required: false
+      example: "HRL96K"
+      selector:
+        text:
+    time_end:
+      name: End time
+      description: "Parking end time. Accepts HH:MM (today) or full dd-MM-yyyy HH:mm:ss."
+      required: true
+      example: "23:59"
+      selector:
+        text:
+
+stop_parking:
+  name: Stop parking
+  description: Stop an active visitor parking session for a license plate.
+  fields:
+    product_id:
+      name: Product ID
+      description: The 2Park product ID (e.g. BDABZRG_1317$1055649).
+      required: true
+      example: "BDABZRG_1317$1055649"
+      selector:
+        text:
+    license_plate:
+      name: License plate
+      description: License plate of the active parking session to stop.
+      required: true
+      example: "HRL96K"
+      selector:
+        text:

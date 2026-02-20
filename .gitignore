@@ -16,6 +16,12 @@ venv/
 # Home Assistant config (devcontainer)
 config/
 
+# Sensitive files
+*.har
+
+# Devcontainer symlinks
+custom_components/custom_components
+
 # OS
 .DS_Store
 Thumbs.db

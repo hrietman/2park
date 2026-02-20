@@ -2,8 +2,9 @@
   "domain": "2park",
   "name": "2Park",
   "codeowners": [],
-  "config_flow": false,
+  "config_flow": true,
   "documentation": "",
+  "icon": "mdi:car-parking",
   "iot_class": "cloud_polling",
   "issue_tracker": "",
   "version": "0.1.0"
