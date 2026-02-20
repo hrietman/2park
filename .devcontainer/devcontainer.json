@@ -1,0 +1,28 @@
+{
+  "name": "2Park HA Development",
+  "image": "ghcr.io/home-assistant/devcontainer:latest",
+  "postCreateCommand": "script/setup",
+  "forwardPorts": [8123],
+  "portsAttributes": {
+    "8123": {
+      "label": "Home Assistant",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      }
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/custom_components,target=/workspaces/core/config/custom_components,type=bind"
+  ]
+}
