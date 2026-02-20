@@ -12,6 +12,8 @@ venv/
 
 # IDE
 .idea/
+.vscode/
+.devcontainer/
 
 # Home Assistant config (devcontainer)
 config/
