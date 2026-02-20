@@ -1,11 +1,11 @@
 {
   "domain": "2park",
   "name": "2Park",
-  "codeowners": [],
+  "codeowners": ["@hrietman"],
   "config_flow": true,
-  "documentation": "",
+  "documentation": "https://github.com/hrietman/2park",
   "icon": "mdi:car-parking",
   "iot_class": "cloud_polling",
-  "issue_tracker": "",
+  "issue_tracker": "https://github.com/hrietman/2park/issues",
   "version": "0.1.0"
 }
