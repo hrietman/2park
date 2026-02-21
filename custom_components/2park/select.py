@@ -65,7 +65,7 @@ class TwoParkLicensePlateSelect(
         if not self.coordinator.data or self._pdt_id not in self.coordinator.data:
             return []
         members = self.coordinator.data[self._pdt_id].get("members", [])
-        return [m["mbr_identifier"] for m in members]
+        return [_format_plate_option(m) for m in members]
 
     async def async_select_option(self, option: str) -> None:
         """Store the selected license plate locally."""
@@ -78,3 +78,17 @@ class TwoParkLicensePlateSelect(
         if self._attr_current_option and self._attr_current_option not in self.options:
             self._attr_current_option = None
         super()._handle_coordinator_update()
+
+
+def _format_plate_option(member: dict) -> str:
+    """Format a member as 'PLATE (nickname)' or just 'PLATE'."""
+    plate = member["mbr_identifier"]
+    nickname = member.get("nickname")
+    if nickname:
+        return f"{plate} ({nickname})"
+    return plate
+
+
+def extract_plate(option: str) -> str:
+    """Extract the license plate from a display option like 'HRL96K (Mats)'."""
+    return option.split(" (")[0]

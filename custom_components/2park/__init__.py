@@ -14,6 +14,7 @@ from homeassistant.helpers import entity_registry as er
 from .api import TwoParkApi, TwoParkApiError
 from .const import CONF_EMAIL, CONF_PASSWORD, DOMAIN, PLATFORMS
 from .coordinator import TwoParkCoordinator
+from .select import extract_plate
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -127,7 +128,9 @@ def _register_services(hass: HomeAssistant) -> None:
 
         # Fall back to select entity if no plate provided
         if not license_plate:
-            license_plate = _find_select_entity_plate(hass, product_id)
+            selected = _find_select_entity_plate(hass, product_id)
+            if selected:
+                license_plate = extract_plate(selected)
         if not license_plate:
             raise HomeAssistantError(
                 "No license plate provided and no plate selected in the select entity"

@@ -7,5 +7,5 @@
   "icon": "mdi:car-parking",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/hrietman/2park/issues",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
