@@ -211,9 +211,11 @@ def _extract_location(product: dict) -> str | None:
                 value = param.get("prr_value")
                 if value:
                     return value
-    # Fallback: derive from product_id (e.g. BDABZRG_1317$... -> BDA1317)
+    # Fallback: derive from product_id (e.g. BDABZRG_1317$... -> BDA1317).
+    # Municipality codes are 2–4 uppercase chars followed by the product type
+    # (also uppercase), then underscore + numeric location ID.
     pdt_id = product.get("pdt_id", "")
-    match = re.match(r"^(BDA)\w+_(\d+)\$", pdt_id)
+    match = re.match(r"^([A-Z]{2,4})[A-Z]+_(\d+)\$", pdt_id)
     if match:
         return f"{match.group(1)}{match.group(2)}"
     return None

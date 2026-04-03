@@ -2,7 +2,22 @@
 
 ## Project Overview
 
-Custom Home Assistant integration for **2Park** (mijn.2park.nl), Breda's municipal parking permit management system. Designed for HACS distribution.
+Custom Home Assistant integration for **2Park** (mijn.2park.nl), a municipal parking permit management system used by multiple Dutch municipalities (including Breda). Designed for HACS distribution.
+
+## Known Municipalities
+
+The following Dutch municipalities are confirmed to use 2Park (not exhaustive — more are adopting it over time):
+
+- Assen
+- Bergen op Zoom
+- Breda
+- Emmen
+- Gorinchem
+- Maastricht
+- Oosterhout
+- Roosendaal
+- Tiel
+- Vlaardingen
 
 ## What 2Park Does
 
@@ -66,7 +81,7 @@ hacs.json                   # HACS metadata
 
 - `BDABZRG_1317$1055649` = Bezoekersregeling (visitor scheme)
 - `BDATKTKBH_1317$1053327` = Bewoner Basisvergunning (resident permit)
-- `BDA` prefix = Breda
+- `BDA` prefix = Breda; other municipalities use their own 2–4 char prefix
 
 ### Member Types
 
