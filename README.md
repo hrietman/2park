@@ -1,6 +1,8 @@
 # 2Park - Home Assistant Integration
 
-Custom Home Assistant integration for [2Park](https://mijn.2park.nl), the municipal parking permit management system used by the city of Breda, Netherlands.
+Custom Home Assistant integration for [2Park](https://mijn.2park.nl), a municipal parking permit management system used by multiple Dutch municipalities.
+
+2Park is used among others by the municipalities of Assen, Bergen op Zoom, Breda, Emmen, Gorinchem, Maastricht, Oosterhout, Roosendaal, Tiel, and Vlaardingen.
 
 ## Features
 
@@ -63,4 +65,4 @@ Stop an active visitor parking session.
 
 **This integration is in beta and provided as-is. Use at your own risk.**
 
-This is an unofficial, community-built integration. It is not affiliated with, endorsed by, or supported by 2Park or the municipality of Breda. The integration relies on a reverse-engineered API that may change without notice, potentially causing the integration to break. The authors are not responsible for any issues, incorrect parking registrations, unexpected charges, or other problems arising from the use of this integration.
+This is an unofficial, community-built integration. It is not affiliated with, endorsed by, or supported by 2Park or any municipality. The integration relies on a reverse-engineered API that may change without notice, potentially causing the integration to break. The authors are not responsible for any issues, incorrect parking registrations, unexpected charges, or other problems arising from the use of this integration.
